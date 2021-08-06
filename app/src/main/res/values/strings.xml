@@ -3,4 +3,11 @@
     <string name="photo_of_the_day_stub">Photo of the day</string>
     <string name="search_wiki">Искать</string>
     <string name="wiki_helper_text">Введите искомый термин</string>
+    <string name="bottom_bar_menu_settings_title">Настройки</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_settings_header_title">Настройки</string>
+    <string name="night_mode_title">Темная тема</string>
+    <string name="day_mode_title">Дневная тема</string>
+    <string name="main_header_title">Главная</string>
 </resources>

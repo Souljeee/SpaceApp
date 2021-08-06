@@ -5,11 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="10dp"
+        app:layout_anchor="@+id/main"
+        app:layout_anchorGravity="center">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_layout"
@@ -17,6 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/search_wiki"
+            android:layout_marginBottom="10dp"
             app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusBottomStart="30dp"
             app:boxCornerRadiusTopEnd="30dp"
@@ -28,19 +32,31 @@
             app:helperText="@string/wiki_helper_text"
             app:layout_constraintBottom_toTopOf="@+id/image_view"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextAppearanceHeader"
+            android:text="@string/main_header_title"
+            app:layout_constraintBottom_toTopOf="@+id/input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.example.spaceapp.ui.main.EquilateralImageView
             android:id="@+id/image_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="388dp"
+            android:layout_height="387dp"
             android:layout_gravity="center"
             android:contentDescription="@string/photo_of_the_day_stub"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,6 +64,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <include layout="@layout/bottom_sheet_layout"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_app_bar"
+        android:layout_gravity="bottom"
+        android:backgroundTint="?attr/colorPrimary"
+        app:fabAlignmentMode="center"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:backgroundTint="?attr/colorSecondary"
+        app:layout_anchor="@id/bottom_app_bar"
+        android:src="@drawable/ic_add_fab"
+        app:tint="#FFFFFF"/>
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

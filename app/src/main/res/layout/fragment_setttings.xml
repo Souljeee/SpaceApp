@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.SettingsFragment"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/fragment_settings_header_title"
+            style="@style/TextAppearanceHeader"/>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/night_mode_switch"
+            style="@style/SwitchAppearance"
+            android:text="@string/night_mode_title" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/day_mode_switch"
+            style="@style/SwitchAppearance"
+            android:text="@string/day_mode_title" />
+    </LinearLayout>
+
+</FrameLayout>
