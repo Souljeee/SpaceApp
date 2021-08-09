@@ -10,4 +10,9 @@
     <string name="night_mode_title">Темная тема</string>
     <string name="day_mode_title">Дневная тема</string>
     <string name="main_header_title">Главная</string>
+    <string name="emw_item_title">Фото планет</string>
+    <string name="start_date_title">Введите начальную дату</string>
+    <string name="date_example">yyyy-mm-dd</string>
+    <string name="end_date_title">Введите конечную дату</string>
+    <string name="weather_header_text">Coronal mass ejection in the last 30 days</string>
 </resources>

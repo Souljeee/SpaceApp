@@ -6,4 +6,9 @@
         android:icon="@drawable/ic_settings_menu"
         android:title="@string/bottom_bar_menu_settings_title"
         app:showAsAction="always"/>
+    <item
+        android:id="@+id/emw_item"
+        android:icon="@drawable/ic_emw"
+        android:title="@string/emw_item_title"
+        app:showAsAction="always"/>
 </menu>

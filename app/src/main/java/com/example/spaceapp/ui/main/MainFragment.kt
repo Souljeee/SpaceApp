@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.TextView
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.spaceapp.MainActivity
 import com.example.spaceapp.R
 import com.example.spaceapp.databinding.MainFragmentBinding
+import com.example.spaceapp.ui.main.EMWActivity.EMWActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.squareup.picasso.Picasso
 
@@ -46,7 +48,6 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel.getData().observe(viewLifecycleOwner, Observer <PictureOfTheDayData>{ renderData(it) })
-        // TODO: Use the ViewModel
     }
 
     private fun renderData(data: PictureOfTheDayData) = with(binding) {
@@ -59,8 +60,8 @@ class MainFragment : Fragment() {
                     //Отобразите ошибку
                     //showError("Сообщение, что ссылка пустая")
                 } else {
-
                     Picasso.get().load(url).into(imageView)
+                    //Log.d("tag","кайфарик")
                 }
             }
             is PictureOfTheDayData.Loading -> {
@@ -89,6 +90,9 @@ class MainFragment : Fragment() {
                     ?.add(R.id.container,SettingsFragment.newInstance())
                     ?.addToBackStack("")
                     ?.commit()
+            }
+            R.id.emw_item ->{
+                activity?.let { startActivity(Intent(it,EMWActivity::class.java)) }
             }
         }
         return super.onOptionsItemSelected(item)
