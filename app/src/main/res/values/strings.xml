@@ -15,4 +15,5 @@
     <string name="date_example">yyyy-mm-dd</string>
     <string name="end_date_title">Введите конечную дату</string>
     <string name="weather_header_text">Coronal mass ejection in the last 30 days</string>
+    <string name="space_info_title">Space Info</string>
 </resources>
