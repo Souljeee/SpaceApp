@@ -3,4 +3,17 @@
     <string name="photo_of_the_day_stub">Photo of the day</string>
     <string name="search_wiki">Искать</string>
     <string name="wiki_helper_text">Введите искомый термин</string>
+    <string name="bottom_bar_menu_settings_title">Настройки</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_settings_header_title">Настройки</string>
+    <string name="night_mode_title">Темная тема</string>
+    <string name="day_mode_title">Дневная тема</string>
+    <string name="main_header_title">Главная</string>
+    <string name="emw_item_title">Фото планет</string>
+    <string name="start_date_title">Введите начальную дату</string>
+    <string name="date_example">yyyy-mm-dd</string>
+    <string name="end_date_title">Введите конечную дату</string>
+    <string name="weather_header_text">Coronal mass ejection in the last 30 days</string>
+    <string name="space_info_title">Space Info</string>
 </resources>
