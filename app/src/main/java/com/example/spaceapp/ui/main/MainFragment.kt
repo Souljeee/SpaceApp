@@ -18,6 +18,7 @@ import com.example.spaceapp.MainActivity
 import com.example.spaceapp.R
 import com.example.spaceapp.databinding.MainFragmentBinding
 import com.example.spaceapp.ui.main.EMWActivity.EMWActivity
+import com.example.spaceapp.ui.main.TODOActivity.TODOActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.squareup.picasso.Picasso
 
@@ -117,6 +118,9 @@ class MainFragment : Fragment() {
             }
             R.id.emw_item ->{
                 activity?.let { startActivity(Intent(it,EMWActivity::class.java)) }
+            }
+            R.id.todo_item ->{
+                activity?.let { startActivity(Intent(it, TODOActivity::class.java)) }
             }
         }
         return super.onOptionsItemSelected(item)
