@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpaceApp.Day">
-        <activity android:name=".ui.main.EMWActivity.EMWActivity"/>
+        <activity android:name=".ui.main.TODOActivity.TODOActivity"></activity>
+        <activity android:name=".ui.main.EMWActivity.EMWActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
