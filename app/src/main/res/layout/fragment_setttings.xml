@@ -12,13 +12,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
+            android:fontFamily="@font/roboto_mono"
             android:text="@string/fragment_settings_header_title"
             style="@style/TextAppearanceHeader"/>
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:fontFamily="@font/roboto_mono"
             android:id="@+id/night_mode_switch"
             style="@style/SwitchAppearance"
             android:text="@string/night_mode_title" />
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:fontFamily="@font/roboto_mono"
             android:id="@+id/day_mode_switch"
             style="@style/SwitchAppearance"
             android:text="@string/day_mode_title" />
