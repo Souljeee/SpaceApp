@@ -1,9 +1,13 @@
 package com.example.spaceapp.ui.main
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.transition.*
 import android.util.Log
 import android.view.*
@@ -76,7 +80,7 @@ class MainFragment : Fragment() {
             is PictureOfTheDayData.Success -> {
                 val serverResponseData = data.serverResponseData
                 val url = serverResponseData.url
-                val explanation = serverResponseData.title
+                val exp = serverResponseData.title
                 if (url.isNullOrEmpty()) {
                     //Отобразите ошибку
                     //showError("Сообщение, что ссылка пустая")
@@ -86,6 +90,10 @@ class MainFragment : Fragment() {
                     TransitionManager.beginDelayedTransition(cont,fade)
                     Picasso.get().load(url).into(imageView)
                     imageView.visibility = View.VISIBLE
+                    val spannable = SpannableString(exp)
+                    spannable.setSpan(ForegroundColorSpan(Color.BLUE), 0,  spannable.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                    explanation.text = spannable
+                    explanation.visibility = View.VISIBLE
                     //Log.d("tag","кайфарик")
                 }
             }

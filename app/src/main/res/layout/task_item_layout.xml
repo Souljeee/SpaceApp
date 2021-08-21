@@ -10,6 +10,7 @@
        android:layout_height="match_parent"
        android:orientation="horizontal">
        <CheckBox
+           android:fontFamily="@font/roboto_mono"
            android:id="@+id/task_checkbox"
            android:layout_gravity="center|start"
            android:textSize="20sp"

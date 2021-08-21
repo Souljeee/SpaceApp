@@ -9,6 +9,7 @@
     tools:context=".ui.main.EMWActivity.WeatherFragment.WeatherFragment">
 
     <TextView
+        android:fontFamily="@font/roboto_mono"
         android:visibility="gone"
         android:id="@+id/weather_header"
         android:layout_width="match_parent"
@@ -21,6 +22,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:fontFamily="@font/roboto_mono"
         android:visibility="gone"
         android:id="@+id/weather_note"
         android:layout_marginTop="30dp"
