@@ -1,6 +1,8 @@
 package com.example.spaceapp.ui.main.EMWActivity.EarthFragment
 
 import android.os.Bundle
+import android.transition.Fade
+import android.transition.TransitionManager
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,7 +46,11 @@ class EarthFragment : Fragment() {
                     //Отобразите ошибку
                     //showError("Сообщение, что ссылка пустая")
                 } else {
+                    val fade = Fade()
+                    fade.duration = 1500
+                    TransitionManager.beginDelayedTransition(contEarth,fade)
                     Picasso.get().load(url).into(earthImage)
+                    earthImage.visibility = View.VISIBLE
                 }
             }
             is EarthDataState.Loading -> { }

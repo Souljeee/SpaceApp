@@ -2,6 +2,8 @@ package com.example.spaceapp.ui.main.EMWActivity.WeatherFragment
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.transition.Fade
+import android.transition.TransitionManager
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,8 +42,13 @@ class WeatherFragment : Fragment() {
     private fun renderData(data: WeatherDataState) = with(binding) {
         when (data) {
             is WeatherDataState.Success -> {
+                val fade = Fade()
+                fade.duration = 1500
+                TransitionManager.beginDelayedTransition(contWeather,fade)
                 val serverResponseData = data.serverResponseData
                 weatherNote.text = serverResponseData.note
+                weatherHeader.visibility = View.VISIBLE
+                weatherNote.visibility = View.VISIBLE
             }
             is WeatherDataState.Loading -> { }
             is WeatherDataState.Error -> { }

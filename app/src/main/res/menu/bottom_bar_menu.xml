@@ -11,4 +11,10 @@
         android:icon="@drawable/ic_emw"
         android:title="@string/emw_item_title"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/todo_item"
+        android:icon="@drawable/ic_baseline_done_24"
+        android:title="@string/emw_item_title"
+        app:showAsAction="always"/>
 </menu>
